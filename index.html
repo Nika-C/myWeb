@@ -1,83 +1,246 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-    <title>CKD Meal Recommender</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <title>Meal Recommender</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+  </head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="https://cdn-icons-png.flaticon.com/512/648/648537.png" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#diary" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-pencil w3-xxlarge"></i>
+    <p>DIARY</p>
+  </a>
+  <a href="#reciepe" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-cutlery w3-xxlarge"></i>
+    <p>RECIEPE</p>
+  </a>
+  <a href="#profile" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>PROFILE</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#diary" class="w3-bar-item w3-button" style="width:25% !important">DIARY</a>
+    <a href="#reciepe" class="w3-bar-item w3-button" style="width:25% !important">RECEIPE</a>
+    <a href="#profile" class="w3-bar-item w3-button" style="width:25% !important">PROFILE</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo">Meal Planner<span class="w3-hide-small"> for CKD </span></h1>
+    <p>What should I eat?</p>
+    <img src="https://wtop.com/wp-content/uploads/2020/06/HEALTHYFRESH.jpg"
+     alt="boy" class="w3-image" width="992" height="1108">
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">About Us</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>This is a website. This is a website. This is a website. This is a website. This is a website. This is a website. This is a website.
+    </p>
+
+    <h3 class="w3-padding-16 w3-text-light-grey">My Nutrition</h3>
+    <p class="w3-wide">Energy</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Protein</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Carb</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Fat</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Sodium</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Potassium</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Phosphorus</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div><br>
 
 
-<body>
-  <h1> Meal Recommender </h1>
-  This is a page to start buidling a<u> <strong>PGHD</strong> entry system </u>
-  <p>
-    <a href="index.html" style="color:red">HOME</a>
-  </p>
-
-  <ol>
-    <li><a href="1.html">CKD</a></li>
-    <li><a href="2.html">Comorbidities</a></li>
-    <li><a href="3.html">Self-Management</a></li>
-  </ol>
-
-  <input type="checkbox">
-  <input type="button" title="Button">
 
 
-  <img src="cat.png" width="20%">
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">11+</span><br>
+        Partners
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">55+</span><br>
+        Projects Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">89+</span><br>
+        Happy Clients
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">150+</span><br>
+        Meetings
+      </div>
+    </div>
 
-  <p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/jSJM9iOiQ1g" frameborder="0" allowfullscreen></iframe>
-  </p>
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+    </button>
 
+    <!-- Grid for pricing tables -->
+    <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">5GB Storage</li>
+          <li class="w3-padding-16">Mail Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 10</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
 
-<!-- Disque service to add commenting function
--->
-  <p>
-    <div id="disqus_thread"></div>
-<script>
+      <div class="w3-half">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">50GB Storage</li>
+          <li class="w3-padding-16">Endless Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 25</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+    <!-- End Grid/Pricing tables -->
+    </div>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://web1-2.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <!-- Testimonials -->
+    <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>
+    <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
+    <p>John Doe saved us from a web disaster.</p><br>
 
-  </p>
+    <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
+    <p>No one is better than John Doe.</p>
+  <!-- End About Section -->
+  </div>
 
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Photos</h2>
+    <hr style="width:200px" class="w3-opacity">
 
-  <p>
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/sailboat.jpg" style="width:100%">
+      </div>
 
+      <div class="w3-half">
+        <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/chef.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/p6.jpg" style="width:100%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
 
-  </p>
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
 
-  <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/57a72994c11fe69b0bd8fa90/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Chicago, US</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    </div><br>
+    <p>Let's get in touch. Send me a message:</p>
 
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+ <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
+ <a class="w3-button w3-round-xxlarge w3-small w3-light-grey" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+ <!-- End footer -->
+</footer>
+
+<!-- END PAGE CONTENT -->
+</div>
 
 </body>
-
-
 </html>
