@@ -8,7 +8,7 @@
 </head>
 
 
-<body style="background-color: white; color: black;">
+<body>
   <h1> Meal Recommender </h1>
   This is a page to start buidling a<u> <strong>PGHD</strong> entry system </u>
   <p>
@@ -21,15 +21,27 @@
     <li><a href="3.html">Self-Management</a></li>
   </ol>
 
-  <input type="checkbox">
   <input type="button" value="night" onclick="
-  document.querySelector('body').style.backgroundColor = 'black';
-  document.querySelector('body').style.color = 'white';
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
   ">
   <input type="button" value="day" onclick="
-  document.querySelector('body').style.backgroundColor = 'white';
-  document.querySelector('body').style.color = 'black';
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
   ">
+
+  <input id="night_day" type="button" value="night" onclick="
+    if(document.querySelector('#night_day').value==='night'){
+      document.querySelector('body').style.backgroundColor='black';
+      document.querySelector('body').style.color='white';
+      document.querySelector('#night_day').value = 'day';
+    }else{
+      document.querySelector('body').style.backgroundColor='white';
+      document.querySelector('body').style.color='black';
+      document.querySelector('#night_day').value = 'night';
+    }
+  ">
+
 
   <img src="cat.png" width="20%">
 
